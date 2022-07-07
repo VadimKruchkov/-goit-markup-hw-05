@@ -197,6 +197,10 @@ ul {
   height: 100%;
   background-color: rgb(82, 82, 82, 0.6);
 }
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 .modal {
   position: absolute;
   top: 50%;
@@ -210,8 +214,24 @@ ul {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.close-modal {
+.close-modal-svg {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: fill;
 }
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: #eeeeee;
+  background: #ffffff;
+}
+
+.close-modal:hover .close-modal-svg,
+.close-modal:focus .close-modal-svg {
+  fill: var(--accent-color);
+}
+
 /*--Преимущества--*/
 
 .benefits-subtitle {
