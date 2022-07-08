@@ -194,6 +194,8 @@ ul {
 .btn:focus {
   background-color: #188ce8;
 }
+/*Модальное окно*/
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -201,17 +203,22 @@ ul {
   width: 100%;
   height: 100%;
   background-color: rgb(82, 82, 82, 0.6);
+  opacity: 1;
+  transition: transform 250ms, opacity 250ms, visibility 250ms;
+  transform: scale(1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
+  transform: scale(0);
 }
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 528px;
   height: 581px;
   background: var(--mainwhite-color);
@@ -222,10 +229,6 @@ ul {
 .close-modal-svg {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  transition: fill;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-modal {
   position: absolute;
