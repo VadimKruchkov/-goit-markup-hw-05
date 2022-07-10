@@ -226,6 +226,113 @@ ul {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+.modal-title {
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-bottom: 12px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+.modal-item {
+  display: flex;
+}
+.modal-item-text {
+  margin-bottom: 4px;
+  margin-left: 40px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--secondary-text-color);
+
+  letter-spacing: 0.01em;
+}
+.modal-item-name-input {
+  margin-left: 40px;
+  margin-bottom: 10px;
+  width: 448px;
+  height: 40px;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+}
+.modal-item-phone-input {
+  margin-left: 40px;
+  margin-bottom: 10px;
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.modal-item-email-input {
+  margin-left: 40px;
+  margin-bottom: 10px;
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.modal-item-feedback-box {
+  margin-left: 40px;
+  margin-bottom: 10px;
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.modal-item-checkbox {
+  display: flex;
+  margin-top: 25px;
+  margin-left: 54px;
+}
+.modal-item-checkbox-text {
+  margin-left: 8px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+.modal-item-checkbox-link {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+.modal-item-submit-button {
+  margin-bottom: 40px;
+  margin-left: 164px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--mainwhite-color);
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  width: 200px;
+  height: 50px;
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.modal-item:hover,
+.modal-item:focus {
+  border: var(--accent-color);
+}
 .close-modal-svg {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -449,6 +556,8 @@ ul {
 
 .footer {
   background-color: var(--hero-bg-color);
+  background-position: center;
+  background-size: cover;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -529,11 +638,11 @@ address {
 .footer-social-items:not(:first-child) {
   margin-left: 10px;
 }
-/*subscribe-section*/
+/*E-mail-section*/
 .subscribe-section {
-  margin-top: 10px;
+  margin-top: 12px;
 }
-.subscribe-section-title {
+.e-mail-section-title {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -544,7 +653,7 @@ address {
   color: var(--mainwhite-color);
   margin-bottom: 20px;
 }
-.subscribe-section-input {
+.e-mail-section-input {
   width: 358px;
   height: 50px;
   font-family: "Roboto";
@@ -562,7 +671,7 @@ address {
   border-radius: 4px;
   margin-right: 12px;
 }
-.subscribe-section-btn {
+.e-mail-section-btn {
   width: 200px;
   height: 50px;
   font-family: "Roboto";
@@ -574,6 +683,14 @@ address {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: 0;
+}
+.e-mail-section-btn-text::after {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-image: url(../images/icon-sand.svg);
+  background: var(--mainwhite-color);
 }
 /*Портфолио*/
 .button-portfolio {
@@ -663,6 +780,7 @@ address {
 }
 .portfolio-main {
   background-color: var(--primary-bg-color);
+  background-position: center;
 }
 .project-subtitle {
   color: var(--primary-text-color);
